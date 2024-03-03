@@ -1,5 +1,5 @@
 from turtle  import*
-speed('slowest')
+"""speed('slowest')
 pencolor('blue')
 pensize(4)
 for i in range(10):
@@ -7,4 +7,4 @@ for i in range(10):
  lt(36)
  write(f'n={i}')
 hideturtle()
-mainloop()
+mainloop()"""
