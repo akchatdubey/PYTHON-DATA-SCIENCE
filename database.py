@@ -20,6 +20,16 @@ class Message(Base):
     message=Column(String(128))
     created_at=Column(DateTime,default=datetime.now())
     
+def get_db():
+    engine=create_engine('sqlite:///example.db')
+    return sessionmaker(bind=engine)()
+
+def save_to_db(object):
+    db=get_db()
+    db.add(object)
+    db.commit()
+    db.close()
+    
 if __name__=="__main__":
     engine=create_engine('sqlite:///example.db')
     Base.metadata.create_all(engine)
